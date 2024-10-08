@@ -1,0 +1,20 @@
+{
+  "name": "frontend-movekers",
+  "version": "1.0.0",
+  "description": "Frontend page for packers and movers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "nodemon": "^3.1.4",
+    "parser": "^0.1.4"
+  }
+}

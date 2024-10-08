@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Shree Logistics</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+      overflow-x: hidden;
+    }
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1000;
+    }
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.1); /* More transparent */
+      backdrop-filter: blur(2px); /* Less blur */
+      z-index: -999;
+    }
+    header, footer {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      z-index: 1000;
+      background-color: rgba(248, 249, 250, 0.7);
+    }
+    header {
+      top: 0;
+      border-bottom: 1px solid rgba(233, 236, 239, 0.5);
+    }
+    footer {
+      bottom: 0;
+      border-top: none; /* Remove top border */
+      padding: 1rem 0;
+    }
+    footer .container {
+      background-color: rgba(255, 255, 255, 0.1); /* Very subtle background */
+      border-radius: 10px 10px 0 0; /* Rounded top corners */
+      padding: 10px;
+    }
+    footer .nav-link, 
+    footer .text-body-secondary {
+      color: #fff !important; /* White text */
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Text shadow for readability */
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+      padding-top: 70px;
+      padding-bottom: 70px;
+      background-color: transparent; /* Remove background */
+      color: #fff; /* Change text color to white for better visibility */
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.8); /* Add text shadow for readability */
+    }
+    .logo {
+      width: 200px;
+      height: auto;
+      margin: 30px auto;
+    }
+    .feature-icon {
+      font-size: 2rem;
+      color: #fff; /* Change icon color to white */
+      margin-bottom: 1rem;
+    }
+    .about-section {
+      margin-bottom: 3rem;
+    }
+    .social-icons a {
+      color: #fff; /* Change icon color to white */
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #e0e0e0;
+    }
+    h1, h3 {
+      color: #fff; /* Ensure headings are white */
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop class="video-background">
+    <source src="/images/AboutClip.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="overlay"></div>
+  
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+            <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+          </svg>
+          Shree Logistics
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <form action="/about" method="POST" class="d-inline">
+                <button type="submit" class="nav-link btn btn-link">About</button>
+              </form>
+            </li>
+            <li class="nav-item">
+              <form action="/services" method="POST" class="d-inline">
+                <button type="submit" class="nav-link btn btn-link">Services</button>
+              </form>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container my-5 content">
+    <h1 class="text-center mb-5">About Shree Logistics</h1>
+    
+    <div class="row about-section">
+      <div class="col-md-6">
+        <h3><i class="fas fa-globe feature-icon"></i> Global Reach</h3>
+        <p>We are a leading logistics company providing top-quality services across the globe. Our mission is to deliver exceptional logistics solutions that ensure the timely and efficient movement of goods.</p>
+      </div>
+      <div class="col-md-6">
+        <h3><i class="fas fa-cogs feature-icon"></i> Specialized Services</h3>
+        <p>With years of experience in the industry, we specialize in air freight, sea freight, and custom clearance services. Our dedicated team of professionals is committed to offering personalized solutions tailored to meet the unique needs of our clients.</p>
+      </div>
+    </div>
+    
+    <div class="row about-section">
+      <div class="col-md-6">
+        <h3><i class="fas fa-users feature-icon"></i> Customer-Centric Approach</h3>
+        <p>At Shree Logistics, customer satisfaction is our top priority. We leverage the latest technology and industry best practices to ensure a seamless logistics experience for all our customers.</p>
+      </div>
+      <div class="col-md-6">
+        <h3><i class="fas fa-truck feature-icon"></i> Efficient Solutions</h3>
+        <p>Our innovative approach and state-of-the-art facilities enable us to provide efficient and cost-effective logistics solutions, helping our clients streamline their supply chain operations.</p>
+      </div>
+    </div>
+    
+    <img src="images/Shree Logistics Logo.png" alt="Shree Logistics Logo" class="logo">
+    
+    <div class="text-center mt-5 social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="nav-link px-2"><i class="fas fa-phone"></i> +91 9082527180</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2"><i class="fas fa-envelope"></i> pranavshrikant9@gmail.com</a></li>
+        </ul>
+        <p class="text-center">© 2023 Shree Logistics, Inc</p>
+      </footer>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
